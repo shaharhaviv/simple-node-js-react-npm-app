@@ -19,6 +19,12 @@ pipeline {
       }
     }
 
+    stage('Deliver') {
+      steps {
+        input 'Finished? (Click "Proceed" to continue)'
+      }
+    }
+
   }
   environment {
     CI = 'true'
